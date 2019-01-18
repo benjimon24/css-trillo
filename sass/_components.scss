@@ -138,12 +138,13 @@
   &__item {
     position: relative;
 
-    //style all children except the last one
+    //Style all children except the last one
     &:not(:last-child) {
       margin-bottom: 0.5rem;
     }
 
     // Pink overlay that transforms on hover
+    // before creates a pseudoelement that is the first child of the selected element
     &::before {
       content: "";
       position: absolute;
@@ -151,11 +152,10 @@
       width: 3px;
       background-color: var(--color-primary);
       transform: scaleY(0);
-      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
-        background-color 0.1s;
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s;
     }
 
-    // // Lightens a bit when you click the link
+    // Lightens a bit when you click the link
     &:active::before {
       background-color: var(--color-primary-light);
     }
@@ -175,11 +175,20 @@
   }
 }
 
-//LEGAL TEXT
-
+// LEGAL TEXT
 .legal {
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+}
+
+// GALLERY
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
 }
