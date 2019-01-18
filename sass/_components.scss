@@ -192,3 +192,38 @@
     display: block;
   }
 }
+
+// OVERVIEW
+.overview {
+  display: flex;
+
+
+  &__heading {}
+
+  &__stars {
+    //extremely useful trick for splitting multiple elements away from each other in a flex container
+    margin-right: auto;
+  }
+
+  &__icon-star {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary)
+  }
+
+  &__location {
+  }
+
+  &__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary)
+  }
+
+  &__rating {}
+
+  &__rating-average {}
+
+  &__rating-count{}
+
+}
