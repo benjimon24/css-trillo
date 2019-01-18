@@ -196,13 +196,24 @@
 // OVERVIEW
 .overview {
   display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
 
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
 
-  &__heading {}
+    
+  }
 
   &__stars {
     //extremely useful trick for splitting multiple elements away from each other in a flex container
     margin-right: auto;
+    // required to remove line spacing on SVG - could also set line height and font size to 0
+    display: flex; 
   }
 
   &__icon-star {
