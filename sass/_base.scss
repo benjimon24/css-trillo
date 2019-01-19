@@ -49,7 +49,7 @@ Grey dark 3: #999
 }
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box; // includes the padding and the border in the height and width of the element
   font-size: 62.5%; //1rem = 10px
 }
 
