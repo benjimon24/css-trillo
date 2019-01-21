@@ -59,6 +59,12 @@
     width: 2rem;
     fill: var(--color-grey-dark-3);
   }
+
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
 }
 
 //USER NAVIGATION
@@ -120,7 +126,7 @@
   list-style: none;
   margin-top: 3.5rem;
 
-  @media only screen and (max-width: $bp-medium ) {
+  @media only screen and (max-width: $bp-medium) {
     display: flex;
     margin: 0;
   }
@@ -139,8 +145,14 @@
 
     z-index: 10;
 
-    @media only screen and (max-width: $bp-medium ) {
+    @media only screen and (max-width: $bp-medium) {
       justify-content: center;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
     }
   }
 
@@ -151,7 +163,7 @@
     &:not(:last-child) {
       margin-bottom: 0.5rem;
 
-      @media only screen and (max-width: $bp-medium ) {
+      @media only screen and (max-width: $bp-medium) {
         margin: 0;
       }
     }
@@ -177,9 +189,9 @@
     &--active::before {
       transform: scaleY(1);
       width: 100%;
-    }  
-    
-    @media only screen and (max-width: $bp-medium ) {
+    }
+
+    @media only screen and (max-width: $bp-medium) {
       flex: 1;
     }
   }
@@ -189,6 +201,13 @@
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; //color of the parent
+
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.7rem;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
   }
 }
 
@@ -199,7 +218,7 @@
   padding: 2.5rem;
   color: var(--color-grey-light-4);
 
-  @media only screen and (max-width: $bp-medium ) {
+  @media only screen and (max-width: $bp-medium) {
     display: none;
   }
 }
@@ -226,6 +245,16 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
   }
 
   &__stars {
@@ -262,17 +291,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -284,7 +326,7 @@
   border-bottom: 1px solid currentColor; //inherits font color
   padding-bottom: 2px;
   display: inline-block;
-  // background-color: transparent;
+  background-color: transparent; //for some reason this is grey on smaller screen sizes without this
   cursor: pointer;
   transition: all 0.2s;
 
@@ -454,7 +496,7 @@
     font-weight: 300;
   }
 
-  @media only screen and (max-width: $bp-medium ) {
+  @media only screen and (max-width: $bp-medium) {
     padding: 2rem;
     margin-bottom: 2.5rem;
   }
@@ -472,7 +514,7 @@
     margin-bottom: 2.5rem;
   }
 
-  @media only screen and (max-width: $bp-medium ) {
+  @media only screen and (max-width: $bp-medium) {
     padding: 2.5rem 0;
   }
 }
